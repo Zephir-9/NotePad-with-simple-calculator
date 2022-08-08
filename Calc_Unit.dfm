@@ -1,0 +1,438 @@
+object CalcForm: TCalcForm
+  Left = 1107
+  Top = 392
+  Width = 291
+  Height = 360
+  Caption = 'Calc'
+  Color = clWindowFrame
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object SpbMC: TSpeedButton
+    Left = 8
+    Top = 96
+    Width = 33
+    Height = 41
+    Caption = 'MC'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpbMCClick
+  end
+  object SpbMR: TSpeedButton
+    Left = 8
+    Top = 144
+    Width = 33
+    Height = 41
+    Caption = 'MR'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpbMRClick
+  end
+  object SpbMS: TSpeedButton
+    Left = 8
+    Top = 192
+    Width = 33
+    Height = 41
+    Caption = 'MS'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpbMSClick
+  end
+  object SpbMPlus: TSpeedButton
+    Left = 8
+    Top = 240
+    Width = 33
+    Height = 41
+    Caption = 'M+'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpbMPlusClick
+  end
+  object SpbC: TSpeedButton
+    Left = 240
+    Top = 96
+    Width = 33
+    Height = 41
+    Caption = 'C'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpbCClick
+  end
+  object SpbBs: TSpeedButton
+    Left = 240
+    Top = 144
+    Width = 33
+    Height = 41
+    Caption = 'BS'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpbBsClick
+  end
+  object Spb0: TSpeedButton
+    Left = 64
+    Top = 240
+    Width = 33
+    Height = 41
+    Caption = '0'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clOlive
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = Spb0_9Click
+  end
+  object Spb1: TSpeedButton
+    Left = 64
+    Top = 192
+    Width = 33
+    Height = 41
+    Caption = '1'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clOlive
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = Spb0_9Click
+  end
+  object Spb4: TSpeedButton
+    Left = 64
+    Top = 144
+    Width = 33
+    Height = 41
+    Caption = '4'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clOlive
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = Spb0_9Click
+  end
+  object Spb7: TSpeedButton
+    Left = 64
+    Top = 96
+    Width = 33
+    Height = 41
+    Caption = '7'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clOlive
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = Spb0_9Click
+  end
+  object Spb00: TSpeedButton
+    Left = 104
+    Top = 240
+    Width = 33
+    Height = 41
+    Caption = '00'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clOlive
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = Spb00Click
+  end
+  object Spb2: TSpeedButton
+    Left = 104
+    Top = 192
+    Width = 33
+    Height = 41
+    Caption = '2'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clOlive
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = Spb0_9Click
+  end
+  object Spb5: TSpeedButton
+    Left = 104
+    Top = 144
+    Width = 33
+    Height = 41
+    Caption = '5'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clOlive
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = Spb0_9Click
+  end
+  object Spb8: TSpeedButton
+    Left = 104
+    Top = 96
+    Width = 33
+    Height = 41
+    Caption = '8'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clOlive
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = Spb0_9Click
+  end
+  object SpbDot: TSpeedButton
+    Left = 144
+    Top = 240
+    Width = 33
+    Height = 41
+    Caption = ','
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clOlive
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpbDotClick
+  end
+  object Spb3: TSpeedButton
+    Left = 144
+    Top = 192
+    Width = 33
+    Height = 41
+    Caption = '3'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clOlive
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = Spb0_9Click
+  end
+  object Spb6: TSpeedButton
+    Left = 144
+    Top = 144
+    Width = 33
+    Height = 41
+    Caption = '6'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clOlive
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = Spb0_9Click
+  end
+  object Spb9: TSpeedButton
+    Left = 144
+    Top = 96
+    Width = 33
+    Height = 41
+    Caption = '9'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clOlive
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = Spb0_9Click
+  end
+  object SpbSign: TSpeedButton
+    Left = 64
+    Top = 48
+    Width = 33
+    Height = 41
+    Caption = '+/-'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpbSignClick
+  end
+  object SpbPlus: TSpeedButton
+    Left = 200
+    Top = 192
+    Width = 33
+    Height = 41
+    Caption = '+'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpbOperClick
+  end
+  object SpbMinus: TSpeedButton
+    Left = 200
+    Top = 144
+    Width = 33
+    Height = 41
+    Caption = '-'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpbOperClick
+  end
+  object SpbMlt: TSpeedButton
+    Left = 200
+    Top = 96
+    Width = 33
+    Height = 41
+    Caption = '*'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpbOperClick
+  end
+  object SpbDiv: TSpeedButton
+    Left = 200
+    Top = 48
+    Width = 33
+    Height = 41
+    Caption = '/'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpbOperClick
+  end
+  object SpbEqual: TSpeedButton
+    Left = 200
+    Top = 240
+    Width = 33
+    Height = 41
+    Caption = '='
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpbEqualClick
+  end
+  object SpbSqrt: TSpeedButton
+    Left = 104
+    Top = 48
+    Width = 33
+    Height = 41
+    Caption = 'sqrt'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpbSqrtClick
+  end
+  object SpbPower: TSpeedButton
+    Left = 144
+    Top = 48
+    Width = 33
+    Height = 41
+    Caption = '^'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpbOperClick
+  end
+  object SpbInv: TSpeedButton
+    Left = 240
+    Top = 48
+    Width = 33
+    Height = 41
+    Caption = '1/x'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -13
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = SpbInvClick
+  end
+  object CinEdit: TEdit
+    Left = 8
+    Top = 16
+    Width = 265
+    Height = 26
+    Color = clNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clYellow
+    Font.Height = -19
+    Font.Name = 'Terminal'
+    Font.Style = []
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 8
+    Top = 48
+    Width = 33
+    Height = 41
+    BorderStyle = bsSingle
+    Color = clBtnText
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clMenuHighlight
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 8
+      Top = 8
+      Width = 15
+      Height = 20
+      Caption = 'M'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clRed
+      Font.Height = -16
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Visible = False
+    end
+  end
+end

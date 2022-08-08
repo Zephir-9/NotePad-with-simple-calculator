@@ -1,0 +1,102 @@
+unit MainUnit;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Menus;
+
+type
+  TNotePad = class(TForm)
+    Memo1: TMemo;
+    BtnSave: TButton;
+    BtnLoad: TButton;
+    BtnClear: TButton;
+    BtnExit: TButton;
+    MainMenu1: TMainMenu;
+    File1: TMenuItem;
+    SaveOpt: TMenuItem;
+    LoadOpt: TMenuItem;
+    ClearOpt: TMenuItem;
+    N1: TMenuItem;
+    ExitOpt: TMenuItem;
+   procedure Memo1Change(Sender: TObject);
+    procedure BtnExitClick(Sender: TObject);
+    procedure BtnSaveClick(Sender: TObject);
+    procedure BtnClearClick(Sender: TObject);
+    procedure BtnLoadClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure N1Click(Sender: TObject);
+    procedure SaveOptClick(Sender: TObject);
+    procedure LoadOptClick(Sender: TObject);
+    procedure ClearOptClick(Sender: TObject);
+    procedure ExitOptClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    const
+    cFileName = 'Note.txt';
+  end;
+
+
+var
+  NotePad: TNotePad;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TNotePad.BtnExitClick(Sender: TObject);
+begin
+    close;
+end;
+
+procedure TNotePad.BtnSaveClick(Sender: TObject);
+begin
+     Memo1.Lines.SaveToFile(cFileName);
+     BtnSave.Enabled := False;
+end;
+
+procedure TNotePad.BtnClearClick(Sender: TObject);
+begin
+      Memo1.Lines.Clear
+end;
+
+procedure TNotePad.BtnLoadClick(Sender: TObject);
+begin
+Memo1.Lines.LoadFromFile(cFileName);
+end;
+
+procedure TNotePad.FormCreate(Sender: TObject);
+begin
+if FileExist(cFileName) Then
+    BtnLoad.enabled := True;
+    ELSE
+    BtnLoad.Enabled := False;
+end;
+
+
+
+procedure TNotePad.SaveOptClick(Sender: TObject);
+begin
+BtnSave.Click(Sender)
+end;
+
+procedure TNotePad.LoadOptClick(Sender: TObject);
+begin
+BtnLoad.Click(Sender)
+end;
+
+procedure TNotePad.ClearOptClick(Sender: TObject);
+begin
+BtnClear.Click(Sender)
+end;
+
+procedure TNotePad.ExitOptClick(Sender: TObject);
+begin
+BtnExit.Click(Sender)
+end;
+
+end.

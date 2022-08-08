@@ -1,0 +1,16 @@
+program Project1;
+
+uses
+  Forms,
+  MainUnit in 'MainUnit.pas' {NotePad},
+  about_Unit in 'about_Unit.pas' {AboutForm},
+  Calc_Unit in 'Calc_Unit.pas' {CalcForm},
+  Foreng_Unit in 'Foreng_Unit.pas' {FarenForm};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TNotePad, NotePad);
+  Application.Run;
+end.
